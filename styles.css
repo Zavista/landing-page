@@ -8,7 +8,9 @@ body{
     flex-direction: column;
 }
 
-.block-one{
+.block-one{ /*Creates the flex container for our first block (header + contents)
+    Sets the background and font color
+    It will be a vertical flex container so we can stack the header and contents on top of each other*/
     background-color: #1f2937;
     color:  #F9FAF8;
 
@@ -17,18 +19,26 @@ body{
 
 }
 
-.header{
+.header{ /*Creates our header flex container (logo + links)
+    align items keep them at the vertical center while justify content makes sure
+    that the logo and unordered list (w/ the links) are at opposite ends
+    add padding to both horizontal and vertical (20px, 15px)*/
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 20px;
+    padding: 15px 20px;
 }
 
+/*Adjusts our logo text*/
 .logo{
     font-size: 24px;
     font-weight: 700;
 }
 
+/*Creates a flex container for our list-This makes them all horizontal
+list-style-type set to none to remove the bullets
+remove the inbuilt margin and padding in the list
+set the gap between each list item*/
 ul{
     display: flex;
     list-style-type: none;
@@ -37,6 +47,10 @@ ul{
     gap: 16px;
 }
 
+/*Create the flex container for our body (contents + images)
+Space between makes it so that the contents and images are each at opposite ends
+Add extra padding at the bottom so that there is more space between the end of the image
+and the next section*/
 .body{
     display: flex;
     flex-direction: row;
@@ -45,6 +59,8 @@ ul{
     padding-bottom: 40px;
 }
 
+/*Adjusts the heading in the body
+Note this selector looks for things with both .body and h1*/
 .body h1{
     font-size: 48px;
     font-weight: 700;
@@ -52,6 +68,7 @@ ul{
     padding: 0;
 }
 
+/*Adjusts the paragraph in the body*/
 .body p{
     font-size: 18px;
     margin-top: 0px;
@@ -60,6 +77,8 @@ ul{
     color: #E5E7EB;
 }
 
+/*Makes it so that the image will be sized at 400x300
+creates a border*/
 .body img{
     width: 400px;
     height: 300px;
@@ -69,11 +88,18 @@ ul{
     border-color: #3882F6;;
 }
 
+/*Creates a flex container for the contents (h1, p, and buttuon)
+Not really necessary for today's project but could be useful*/
 .contents{
     display: flex;
     flex-direction: column;
 }
 
+/*Adjusts the button and makes sure it has a flex-grow of 0 so that it 
+does not take up the entire .contents flex container and instead retains
+its original size
+similar make sure its shrink is so it does not get mushed
+Thus we need to set its width to 100px*/
 .contents button{
     background-color: #3882F6;
     color: white;
@@ -85,7 +111,7 @@ ul{
     padding: 5px 10px;
 }
 
-
+/*Create the flex container for section two*/
 .block-two{
     background-color: white;
     display:flex;
@@ -93,6 +119,7 @@ ul{
     padding-bottom: 80px;
 }
 
+/*Adjust the header in section two*/
 .block-two h1{
     text-align: center;
     color: #1f2937;
@@ -100,6 +127,8 @@ ul{
     font-weight: 700;
 }
 
+/*Creates the flex container for the .info items (img + txt)
+center them all and then manually add a gap of 52px between each item*/
 .info-container{
     display: flex;
     justify-content: center;
@@ -107,6 +136,7 @@ ul{
     gap: 52px;
 }
 
+/*sizes the images and creates a border*/
 .info-container img{
     width: 100px;
     height: 100px;
@@ -116,6 +146,8 @@ ul{
     border-color: #3882F6;;
 }
 
+/*Creates a flex container to store the img and txt
+We use this to easily center the image within the item*/
 .info{
     display: flex;
     flex-direction: column;
@@ -123,3 +155,78 @@ ul{
     align-items: center;
 }
 
+/*Create the flex contianer for section three*/
+.block-three{
+    display: flex;
+    flex-direction: column;
+    background-color: #E5E7EB;
+    padding: 40px 20px;
+    align-items: center;
+}
+
+/*Adjust the quote font*/
+.quote{
+    font-size: 36px;
+    color: #1f2937;
+    font-style: italic;
+}
+
+/*Adjust the author font*/
+.author{
+    font-size: 18px;
+    color: #1f2937;
+}
+
+/*Create the flex container for section 4
+This one is a bit unique. Think of this as the background for our blue block
+which is our flex item that we center. The padding creates the background*/
+.block-four{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+/*Creates the flex container for our blue block and initialize its width to 1000px
+the space between make sures that the text and button are on opposite sides*/
+.blue-block{
+    background-color: #3882F6;
+    color:white;
+    width: 1000px;
+    padding: 20px 50px;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Create the flex container for the text*/
+.white-text{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Adjust font*/
+.call-to-action{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/*Adjust font*/
+.context{
+    font-size: 18px;
+}
+
+/*Create blue button*/
+.blue-block button{
+    background-color: #3882F6;
+    color: white;
+    border: solid;
+    border-width: 2px;
+    border-radius: 8px; /*Makes it a rounded buttonn*/
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100px;
+    padding: 5px 10px;
+}
