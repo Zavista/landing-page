@@ -9,8 +9,8 @@ body{
 }
 
 .block-one{
-    background-color: #2C041C;
-    color: white;
+    background-color: #1f2937;
+    color:  #F9FAF8;
 
     display:flex;
     flex-direction: column;
@@ -40,10 +40,9 @@ ul{
 .body{
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    padding: 0px 20px;
-    padding-bottom: 20px;
+    padding: 10px 20px;
+    padding-bottom: 40px;
 }
 
 .body h1{
@@ -58,6 +57,16 @@ ul{
     margin-top: 0px;
     margin-bottom: 8px; 
     padding:0px;
+    color: #E5E7EB;
+}
+
+.body img{
+    width: 400px;
+    height: 300px;
+    border-width: 2px;
+    border-radius: 8px; /*makes the border rounded*/
+    border-style: solid;
+    border-color: #3882F6;;
 }
 
 .contents{
@@ -66,7 +75,8 @@ ul{
 }
 
 .contents button{
-    background-color: lavender;
+    background-color: #3882F6;
+    color: white;
     border: none;
     border-radius: 8px; /*Makes it a rounded buttonn*/
     flex-grow: 0;
@@ -74,3 +84,42 @@ ul{
     width: 100px;
     padding: 5px 10px;
 }
+
+
+.block-two{
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 80px;
+}
+
+.block-two h1{
+    text-align: center;
+    color: #1f2937;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.info-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 52px;
+}
+
+.info-container img{
+    width: 100px;
+    height: 100px;
+    border-width: 2px;
+    border-radius: 8px; /*makes the border rounded*/
+    border-style: solid;
+    border-color: #3882F6;;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
