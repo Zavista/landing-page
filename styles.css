@@ -1,0 +1,76 @@
+/*Make our body into a flex container for all the inner items. It would be a vertical container
+so we can stack all the other containers on top of one another*/
+body{
+    font-family: Hero;
+    margin:0; /*Don't need margin cause we want to fill the entire screen*/
+
+    display: flex;
+    flex-direction: column;
+}
+
+.block-one{
+    background-color: #2C041C;
+    color: white;
+
+    display:flex;
+    flex-direction: column;
+
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+}
+
+.body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    padding-bottom: 20px;
+}
+
+.body h1{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.body p{
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 8px; 
+    padding:0px;
+}
+
+.contents{
+    display: flex;
+    flex-direction: column;
+}
+
+.contents button{
+    background-color: lavender;
+    border: none;
+    border-radius: 8px; /*Makes it a rounded buttonn*/
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100px;
+    padding: 5px 10px;
+}
